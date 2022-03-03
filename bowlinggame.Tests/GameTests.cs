@@ -30,6 +30,19 @@ namespace bowlinggame.Tests
             Assert.True(0 == score);
         }
 
+        [Fact]
+        public void CanBowlAllOnesTest()
+        {
+            // Given
+            RollMany(20, 1);
+
+            // When
+            var score = game.Score();
+
+            // Then 
+            Assert.True(20 == score);
+        }
+
         private void RollMany(Int32 rolls, Int32 pins)
         {
             for (var roll=0; roll<rolls; roll++)
