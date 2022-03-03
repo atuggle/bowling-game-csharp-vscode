@@ -22,13 +22,19 @@ Muscle memory I hope to improve doing this kata:
 
 ## Command lines used to scaffold this project
 
-- `git init`
 - `dotnet new console -n bowlinggame.kata -f net6.0`
   - Changed output type to 'library' in bowlinggame.kata.csproj
 - `dotnet new xunit -o bowlinggame.Tests`
 - `dotnet add ./bowlinggame.Tests/bowlinggame.Tests.csproj reference ./bowlinggame.kata/bowlinggame.kata.csproj`
 - `dotnet new sln -o BowlingGameKata` (Move sln file to root folder and delete subfolder BowlingGameKata)
 - `dotnet sln add ./bowlinggame.kata/bowlinggame.kata.csproj ./bowlinggame.Tests/bowlinggame.Tests.csproj`
+
+### Take-aways
+
+- Should have created the sln file first
+- Should have created the project as a library not console app
+- Need to learn how to get VS Code to show Xunit Assert intellisense
+- Extension "**.NET Core Test Explorer**" is pretty cool
 
 ## How to compile and run tests for this repository
 
