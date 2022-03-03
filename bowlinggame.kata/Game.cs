@@ -4,8 +4,12 @@ namespace bowlinggame.kata;
 
 public class Game
 {
-    public Game()
+    public Int32 Score()
     {
-        Console.WriteLine("Hello World!");   
+        return 0;   
+    }
+
+    public void Roll(Int32 pins)
+    {
     }
 }
