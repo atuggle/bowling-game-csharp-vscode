@@ -77,6 +77,19 @@ namespace bowlinggame.Tests
             Assert.True(26 ==score);
         }
 
+        [Fact]
+        public void CanBowlPerfectGameTest()
+        {
+            // Given
+            RollMany(12, 10);
+
+            // When
+            var score = game.Score();
+
+            // Then
+            Assert.True(300 == score);
+        }
+
         private void RollMany(Int32 rolls, Int32 pins)
         {
             for (var roll=0; roll<rolls; roll++)
