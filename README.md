@@ -20,6 +20,22 @@ Muscle memory I hope to improve doing this kata:
 5. Push to remote repository
 6. Repeat steps 1-4 as needed till done
 
+## Command lines used to scaffold this project
+
+- `git init`
+- `dotnet new console -n bowlinggame.kata -f net6.0`
+  - Changed output type to 'library' in bowlinggame.kata.csproj
+- `dotnet new xunit -o bowlinggame.Tests`
+- `dotnet add ./bowlinggame.Tests/bowlinggame.Tests.csproj reference ./bowlinggame.kata/bowlinggame.kata.csproj`
+- `dotnet new sln -o BowlingGameKata` (Move sln file to root folder and delete subfolder BowlingGameKata)
+- `dotnet sln add ./bowlinggame.kata/bowlinggame.kata.csproj ./bowlinggame.Tests/bowlinggame.Tests.csproj`
+
 ## How to compile and run tests for this repository
 
-- TBD
+- build: `dotnet build`
+- run: `dotnet run`
+- test: `dotnet test`
+
+## Helpful links
+
+- [Totorial: Create a .NET tool using the .NET CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools-how-to-create#:~:text=Create%20a%20project%201%20Open%20a%20command%20prompt,3%20Navigate%20to%20the%20microsoft.botsay%20folder.%20cd%20microsoft.botsay)
