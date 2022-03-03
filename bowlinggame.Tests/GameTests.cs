@@ -60,6 +60,23 @@ namespace bowlinggame.Tests
             Assert.True(16 == score);
         }
 
+        [Fact]
+        public void CanBowlStrikeTest()
+        {
+            // Given
+            game.Roll(10);
+            game.Roll(5);
+            game.Roll(2);
+            game.Roll(2);
+            RollMany(15, 0);
+
+            // When
+            var score = game.Score();
+
+            // Then
+            Assert.True(26 ==score);
+        }
+
         private void RollMany(Int32 rolls, Int32 pins)
         {
             for (var roll=0; roll<rolls; roll++)
